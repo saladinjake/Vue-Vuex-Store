@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-main: #fcfdfe;
+  --bg-surface: rgba(255, 255, 255, 0.85);
+  --bg-card: #ffffff;
+  
+  --accent-blue: #3b82f6;
+  --accent-purple: #8b5cf6;
+  --accent-pink: #ec4899;
+  
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  
+  --border-glass: rgba(15, 23, 42, 0.08);
+  --glass-blur: blur(16px);
+  --gradient-premium: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
+  --shadow-premium: 0 10px 40px -10px rgba(15, 23, 42, 0.1);
+  --shadow-lg: 0 20px 50px -12px rgba(15, 23, 42, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .outfit {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+/* Glassmorphism Light Mode */
+.glass {
+  background: var(--bg-surface);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-glass);
+}
+
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: 24px;
+  box-shadow: var(--shadow-premium);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+/* Typography & Effects */
+.gradient-text {
+  background: var(--gradient-premium);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Components */
+.btn-premium {
+  padding: 0.9rem 2.2rem;
+  border-radius: 100px;
+  border: none;
+  background: var(--gradient-premium);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 10px 30px -5px rgba(79, 70, 229, 0.4);
+}
+
+.btn-premium:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 15px 40px -5px rgba(79, 70, 229, 0.5);
+}
+
+.input-premium {
+  background: #f8fafc;
+  border: 1.5px solid var(--border-glass);
+  padding: 1rem 1.5rem;
+  border-radius: 14px;
+  color: var(--text-primary);
+  width: 100%;
+  outline: none;
+  transition: 0.3s;
+  font-family: inherit;
+}
+
+.input-premium:focus {
+  border-color: var(--accent-blue);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.input-premium::placeholder {
+  color: var(--text-muted);
+}
+
+input, select, textarea {
+  color: var(--text-primary) !important;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Layout Parts */
+nav.navbar {
+  height: 85px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.status-pill {
+    padding: 0.4rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.status-pill.pending { background: #fff7ed; color: #f97316; }
+.status-pill.delivered { background: #f0fdf4; color: #22c55e; }
+.status-pill.shipped { background: #eff6ff; color: #3b82f6; }
