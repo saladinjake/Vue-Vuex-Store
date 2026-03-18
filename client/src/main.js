@@ -7,6 +7,11 @@ import './index.css'
 const routes = [
     { path: '/', component: () => import('./pages/Home.vue') },
     { path: '/products', component: () => import('./pages/Products.vue') },
+    { path: '/checkout', component: () => import('./pages/Checkout.vue') },
+
+    { path: '/product/:id', component: () => import('./pages/ProductDetail.vue') },
+    { path: '/cart', component: () => import('./pages/Cart.vue') },
+
 
 ]
 
