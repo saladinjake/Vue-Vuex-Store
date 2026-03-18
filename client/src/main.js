@@ -6,6 +6,7 @@ import './index.css'
 
 const routes = [
     { path: '/', component: () => import('./pages/Home.vue') },
+    { path: '/products', component: () => import('./pages/Products.vue') },
 
 ]
 
