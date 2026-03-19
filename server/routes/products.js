@@ -5,7 +5,7 @@ const { all } = require('../db');
 router.get('/', async (req, res) => {
   try {
     const { category, search, featured, new_arrival, top_seller, discount, limit } = req.query;
-    let query = "SELECT * FROM products WHERE 1=1";
+    let query = "SELECT * FROM products WHERE status = 'approved'";
     const params = [];
 
     if (category) { query += " AND category_id = ?"; params.push(category); }

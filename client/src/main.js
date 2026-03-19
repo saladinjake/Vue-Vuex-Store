@@ -13,6 +13,15 @@ const routes = [
     { path: '/orders', component: () => import('./pages/Orders.vue') },
     { path: '/order/:id', component: () => import('./pages/OrderDetail.vue') },
 
+    { path: '/solutions', component: () => import('./pages/Solutions.vue') },
+
+    { path: '/login', component: () => import('./pages/Login.vue') },
+    { path: '/signup', component: () => import('./pages/Signup.vue') },
+    { path: '/admin-login', component: () => import('./pages/AdminLogin.vue') },
+    { path: '/seller-signup', component: () => import('./pages/SellerSignup.vue') },
+
+
+
 
 ]
 

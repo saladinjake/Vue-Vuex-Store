@@ -24,7 +24,7 @@ const all = (query, params = []) => {
 };
 
 const initDb = async () => {
-
+  // same schema but maybe a bit more refined if needed
   await run(`CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     email TEXT UNIQUE,
@@ -67,9 +67,13 @@ const initDb = async () => {
     new_arrival INTEGER DEFAULT 0,
     top_seller INTEGER DEFAULT 0,
     discount INTEGER DEFAULT 0,
+    status TEXT DEFAULT 'pending',
     FOREIGN KEY(category_id) REFERENCES categories(id),
     FOREIGN KEY(seller_id) REFERENCES sellers(id)
   )`);
+
+  try { await run("ALTER TABLE products ADD COLUMN status TEXT DEFAULT 'pending'"); } catch(e) {}
+  await run("UPDATE products SET status = 'approved' WHERE status = 'pending'");
 
   await run(`CREATE TABLE IF NOT EXISTS orders (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
