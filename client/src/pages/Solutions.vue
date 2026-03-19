@@ -233,5 +233,4 @@ const solutions = [
  }
 
 }
-
 </style>

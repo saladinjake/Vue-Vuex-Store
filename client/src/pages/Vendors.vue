@@ -64,7 +64,6 @@ onMounted(async () => {
 </template>
 
 <style scoped>
-
 .vendors-page  {
      padding:  4rem 0 8rem;
  }
@@ -215,5 +214,4 @@ onMounted(async () => {
      grid-template-columns:  1fr;
  }
  }
-
 </style>

@@ -68,106 +68,185 @@ const handleLogin = async () => {
 </template>
 
 <style scoped>
-.auth-page {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent);
+.auth-page  {
+    
+  height:  100vh;
+    
+  display:  flex;
+    
+  align-items:  center;
+    
+  justify-content:  center;
+    
+  background:  radial-gradient(circle at top right,  rgba(59,  130,  246,  0.1),  transparent);
+    
 }
 
-.auth-card {
-  width: 100%;
-  max-width: 450px;
-  padding: 3rem;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.auth-card  {
+    
+  width:  100%;
+    
+  max-width:  450px;
+    
+  padding:  3rem;
+    
+  border-radius:  16px;
+    
+  background:  rgba(255,  255,  255,  0.05);
+    
+  backdrop-filter:  blur(10px);
+    
+  border:  1px solid rgba(255,  255,  255,  0.1);
+    
 }
 
-.auth-header {
-  text-align: center;
-  margin-bottom: 2.5rem;
+.auth-header  {
+    
+  text-align:  center;
+    
+  margin-bottom:  2.5rem;
+    
 }
 
-.auth-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+.auth-header h1  {
+    
+  font-size:  2.5rem;
+    
+  margin-bottom:  0.5rem;
+    
 }
 
-.error-banner {
-  background: rgba(239, 68, 68, 0.1);
-  border: 1px solid #ef4444;
-  color: #ef4444;
-  padding: 0.75rem;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-  text-align: center;
+.error-banner  {
+    
+  background:  rgba(239,  68,  68,  0.1);
+    
+  border:  1px solid #ef4444;
+    
+  color:  #ef4444;
+    
+  padding:  0.75rem;
+    
+  border-radius:  8px;
+    
+  margin-bottom:  1.5rem;
+    
+  font-size:  0.9rem;
+    
+  text-align:  center;
+    
 }
 
-.input-group {
-  margin-bottom: 1.5rem;
+.input-group  {
+    
+  margin-bottom:  1.5rem;
+    
 }
 
-.input-group label {
-  display: block;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  color: #94a3b8;
+.input-group label  {
+    
+  display:  block;
+    
+  font-size:  0.9rem;
+    
+  margin-bottom:  0.5rem;
+    
+  color:  #94a3b8;
+    
 }
 
-.input-wrapper {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  padding: 0.75rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.input-wrapper  {
+    
+  background:  rgba(255, 255, 255, 0.05);
+    
+  border:  1px solid rgba(255,  255,  255,  0.1);
+    
+  border-radius:  8px;
+    
+  padding:  0.75rem 1rem;
+    
+  display:  flex;
+    
+  align-items:  center;
+    
+  gap:  12px;
+    
 }
 
-.input-wrapper input {
-  background: none;
-  border: none;
-  color: #f8fafc;
-  width: 100%;
-  outline: none;
-  font-size: 1rem;
+.input-wrapper input  {
+    
+  background:  none;
+    
+  border:  none;
+    
+  color:  #f8fafc;
+    
+  width:  100%;
+    
+  outline:  none;
+    
+  font-size:  1rem;
+    
 }
 
-.auth-submit {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+.auth-submit  {
+    
+  width:  100%;
+    
+  height:  50px;
+    
+  display:  flex;
+    
+  align-items:  center;
+    
+  justify-content:  center;
+    
+  gap:  10px;
+    
 }
 
-.auth-footer {
-  text-align: center;
-  margin-top: 2rem;
+.auth-footer  {
+    
+  text-align:  center;
+    
+  margin-top:  2rem;
+    
 }
 
-.auth-footer a {
-  color: #3b82f6;
-  text-decoration: none;
-  font-weight: 600;
+.auth-footer a  {
+    
+  color:  #3b82f6;
+    
+  text-decoration:  none;
+    
+  font-weight:  600;
+    
 }
 
-.loader {
-  width: 20px;
-  height: 20px;
-  border: 2px solid white;
-  border-bottom-color: transparent;
-  border-radius: 50%;
-  animation: rotation 1s linear infinite;
+.loader  {
+    
+  width:  20px;
+    
+  height:  20px;
+    
+  border:  2px solid white;
+    
+  border-bottom-color:  transparent;
+    
+  border-radius:  50%;
+    
+  animation:  rotation 1s linear infinite;
+    
 }
 
-@keyframes rotation {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+@keyframes rotation  {
+    
+  0%  {
+     transform:  rotate(0deg);
+ }
+
+  100%  {
+     transform:  rotate(360deg);
+ }
+
 }
 </style>

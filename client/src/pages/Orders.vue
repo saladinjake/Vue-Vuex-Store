@@ -81,44 +81,174 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.orders-page { padding: 4rem 0 8rem; }
-.page-header { margin-bottom: 4rem; text-align: center; }
-.page-header h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+.orders-page  {
+     padding:  4rem 0 8rem;
+ }
 
-.orders-layout { display: grid; grid-template-columns: 280px 1fr; gap: 3rem; }
+.page-header  {
+     margin-bottom:  4rem;
+     text-align:  center;
+ }
 
-.orders-filter { padding: 2rem; border-radius: 20px; height: fit-content; position: sticky; top: 100px; }
-.orders-filter h3 { margin-bottom: 2rem; font-size: 1.25rem; }
-.f-group { margin-bottom: 1.5rem; }
-.f-group label { display: block; font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 0.75rem; }
+.page-header h1  {
+     font-size:  3.5rem;
+     margin-bottom:  1rem;
+ }
 
-.chk { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.9rem; }
 
-.order-list { display: flex; flex-direction: column; gap: 1.5rem; }
-.order-item { padding: 2rem; }
+.orders-layout  {
+     display:  grid;
+     grid-template-columns:  280px 1fr;
+     gap:  3rem;
+ }
 
-.oi-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; }
-.label { font-size: 0.65rem; color: var(--text-secondary); letter-spacing: 1px; }
-.oi-id h4 { font-size: 1.4rem; font-family: 'Outfit'; margin-top: 2px; }
 
-.status-pill { padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; }
-.status-pill.pending { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
-.status-pill.delivered { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+.orders-filter  {
+     padding:  2rem;
+     border-radius:  20px;
+     height:  fit-content;
+     position:  sticky;
+     top:  100px;
+ }
 
-.oi-body { display: flex; justify-content: space-between; align-items: center; }
+.orders-filter h3  {
+     margin-bottom:  2rem;
+     font-size:  1.25rem;
+ }
 
-.oi-meta { display: flex; gap: 2rem; }
-.meta-bit { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text-secondary); }
+.f-group  {
+     margin-bottom:  1.5rem;
+ }
 
-.oi-price { text-align: right; }
-.amount { display: block; font-size: 1.5rem; font-weight: 800; font-family: 'Outfit'; color: var(--accent-blue); }
+.f-group label  {
+     display:  block;
+     font-size:  0.75rem;
+     color:  var(--text-secondary);
+     text-transform:  uppercase;
+     margin-bottom:  0.75rem;
+ }
 
-.btn-premium.small { padding: 0.6rem 1.25rem; font-size: 0.85rem; }
 
-.empty-state { text-align: center; padding: 5rem; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; color: var(--text-secondary); }
+.chk  {
+     display:  flex;
+     align-items:  center;
+     gap:  10px;
+     margin-bottom:  8px;
+     color:  var(--text-secondary);
+     font-size:  0.9rem;
+ }
 
-@media (max-width: 1024px) {
-    .orders-layout { grid-template-columns: 1fr; }
-    .orders-filter { display: none; }
+
+.order-list  {
+     display:  flex;
+     flex-direction:  column;
+     gap:  1.5rem;
+ }
+
+.order-item  {
+     padding:  2rem;
+ }
+
+
+.oi-header  {
+     display:  flex;
+     justify-content:  space-between;
+     align-items:  flex-start;
+     margin-bottom:  1.5rem;
+ }
+
+.label  {
+     font-size:  0.65rem;
+     color:  var(--text-secondary);
+     letter-spacing:  1px;
+ }
+
+.oi-id h4  {
+     font-size:  1.4rem;
+     font-family:  'Outfit';
+     margin-top:  2px;
+ }
+
+
+.status-pill  {
+     padding:  0.4rem 1rem;
+     border-radius:  100px;
+     font-size:  0.75rem;
+     font-weight:  800;
+     text-transform:  uppercase;
+ }
+
+.status-pill.pending  {
+     background:  rgba(245,  158,  11,  0.1);
+     color:  #f59e0b;
+ }
+
+.status-pill.delivered  {
+     background:  rgba(16,  185,  129,  0.1);
+     color:  #10b981;
+ }
+
+
+.oi-body  {
+     display:  flex;
+     justify-content:  space-between;
+     align-items:  center;
+ }
+
+
+.oi-meta  {
+     display:  flex;
+     gap:  2rem;
+ }
+
+.meta-bit  {
+     display:  flex;
+     align-items:  center;
+     gap:  8px;
+     font-size:  0.85rem;
+     color:  var(--text-secondary);
+ }
+
+
+.oi-price  {
+     text-align:  right;
+ }
+
+.amount  {
+     display:  block;
+     font-size:  1.5rem;
+     font-weight:  800;
+     font-family:  'Outfit';
+     color:  var(--accent-blue);
+ }
+
+
+.btn-premium.small  {
+     padding:  0.6rem 1.25rem;
+     font-size:  0.85rem;
+ }
+
+
+.empty-state  {
+     text-align:  center;
+     padding:  5rem;
+     display:  flex;
+     flex-direction:  column;
+     align-items:  center;
+     gap:  1.5rem;
+     color:  var(--text-secondary);
+ }
+
+
+@media (max-width: 1024px)  {
+    
+    .orders-layout  {
+     grid-template-columns:  1fr;
+ }
+
+    .orders-filter  {
+     display:  none;
+ }
+
 }
 </style>
