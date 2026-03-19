@@ -69,39 +69,169 @@ const solutions = [
 </template>
 
 <style scoped>
-.solutions-page { padding: 4rem 0 8rem; }
-.solutions-hero { text-align: center; margin-bottom: 6rem; }
-.solutions-hero h1 { font-size: 4rem; margin-bottom: 1.5rem; font-weight: 800; }
-.white-text { color: white; -webkit-text-fill-color: white; }
-.solutions-hero p { font-size: 1.25rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto 4rem; }
+.solutions-page  {
+     padding:  4rem 0 8rem;
+ }
 
-.hero-stats { display: flex; justify-content: center; gap: 4rem; }
-.h-stat span { display: block; font-size: 2.5rem; font-weight: 800; font-family: 'Outfit'; color: var(--accent-blue); }
-.h-stat p { font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; margin: 0; }
+.solutions-hero  {
+     text-align:  center;
+     margin-bottom:  6rem;
+ }
 
-.solutions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
-.sol-card { padding: 3rem; display: flex; flex-direction: column; gap: 1.5rem; }
-.icon-wrap { width: 64px; height: 64px; border-radius: 16px; display: flex; align-items: center; justify-content: center; }
-.icon-wrap.blue { background: rgba(59, 130, 246, 0.1); color: var(--accent-blue); }
-.icon-wrap.purple { background: rgba(139, 92, 246, 0.1); color: var(--accent-purple); }
-.icon-wrap.pink { background: rgba(236, 72, 153, 0.1); color: var(--accent-pink); }
+.solutions-hero h1  {
+     font-size:  4rem;
+     margin-bottom:  1.5rem;
+     font-weight:  800;
+ }
 
-.sol-card h3 { font-size: 1.5rem; }
-.sol-card p { color: var(--text-secondary); font-size: 0.95rem; }
+.white-text  {
+     color:  white;
+     -webkit-text-fill-color:  white;
+ }
 
-.features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 1.5rem 0; }
-.features li { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: var(--text-secondary); }
-.features li svg { color: #10b981; }
+.solutions-hero p  {
+     font-size:  1.25rem;
+     color:  var(--text-secondary);
+     max-width:  700px;
+     margin:  0 auto 4rem;
+ }
 
-.btn-premium.small { padding: 0.6rem 1.5rem; font-size: 0.9rem; margin-top: auto; }
 
-.cta-section { margin-top: 8rem; }
-.cta-card { padding: 4rem; border-radius: 32px; display: flex; justify-content: space-between; align-items: center; gap: 3rem; }
-.cta-text h2 { font-size: 2.5rem; margin-bottom: 1rem; }
-.cta-text p { color: var(--text-secondary); font-size: 1.1rem; }
+.hero-stats  {
+     display:  flex;
+     justify-content:  center;
+     gap:  4rem;
+ }
 
-@media (max-width: 1024px) {
-  .solutions-grid { grid-template-columns: 1fr; }
-  .cta-card { flex-direction: column; text-align: center; padding: 3rem; }
+.h-stat span  {
+     display:  block;
+     font-size:  2.5rem;
+     font-weight:  800;
+     font-family:  'Outfit';
+     color:  var(--accent-blue);
+ }
+
+.h-stat p  {
+     font-size:  0.85rem;
+     color:  var(--text-secondary);
+     text-transform:  uppercase;
+     letter-spacing:  1px;
+     margin:  0;
+ }
+
+
+.solutions-grid  {
+     display:  grid;
+     grid-template-columns:  repeat(3,  1fr);
+     gap:  2.5rem;
+ }
+
+.sol-card  {
+     padding:  3rem;
+     display:  flex;
+     flex-direction:  column;
+     gap:  1.5rem;
+ }
+
+.icon-wrap  {
+     width:  64px;
+     height:  64px;
+     border-radius:  16px;
+     display:  flex;
+     align-items:  center;
+     justify-content:  center;
+ }
+
+.icon-wrap.blue  {
+     background:  rgba(59,  130,  246,  0.1);
+     color:  var(--accent-blue);
+ }
+
+.icon-wrap.purple  {
+     background:  rgba(139,  92,  246,  0.1);
+     color:  var(--accent-purple);
+ }
+
+.icon-wrap.pink  {
+     background:  rgba(236,  72,  153,  0.1);
+     color:  var(--accent-pink);
+ }
+
+
+.sol-card h3  {
+     font-size:  1.5rem;
+ }
+
+.sol-card p  {
+     color:  var(--text-secondary);
+     font-size:  0.95rem;
+ }
+
+
+.features  {
+     list-style:  none;
+     display:  flex;
+     flex-direction:  column;
+     gap:  10px;
+     margin:  1.5rem 0;
+ }
+
+.features li  {
+     display:  flex;
+     align-items:  center;
+     gap:  10px;
+     font-size:  0.85rem;
+     color:  var(--text-secondary);
+ }
+
+.features li svg  {
+     color:  #10b981;
+ }
+
+
+.btn-premium.small  {
+     padding:  0.6rem 1.5rem;
+     font-size:  0.9rem;
+     margin-top:  auto;
+ }
+
+
+.cta-section  {
+     margin-top:  8rem;
+ }
+
+.cta-card  {
+     padding:  4rem;
+     border-radius:  32px;
+     display:  flex;
+     justify-content:  space-between;
+     align-items:  center;
+     gap:  3rem;
+ }
+
+.cta-text h2  {
+     font-size:  2.5rem;
+     margin-bottom:  1rem;
+ }
+
+.cta-text p  {
+     color:  var(--text-secondary);
+     font-size:  1.1rem;
+ }
+
+
+@media (max-width: 1024px)  {
+    
+  .solutions-grid  {
+     grid-template-columns:  1fr;
+ }
+
+  .cta-card  {
+     flex-direction:  column;
+     text-align:  center;
+     padding:  3rem;
+ }
+
 }
+
 </style>

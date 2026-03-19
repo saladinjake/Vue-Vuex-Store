@@ -38,6 +38,9 @@ export default {
         },
         updateQuantity({ commit }, payload) {
             commit('UPDATE_QTY', payload)
+        },
+        clearCart({ commit }) {
+            commit('CLEAR_CART')
         }
     },
     getters: {
