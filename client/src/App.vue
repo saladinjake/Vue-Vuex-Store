@@ -11,7 +11,7 @@ const cartCount = computed(() => store.getters['cart/totalItems'])
   <nav class="navbar glass">
     <div class="container nav-content">
       <router-link to="/" class="logo">
-        <span class="gradient-text">B2B</span><span class="logo-light">NEXUS</span>
+        <span class="gradient-text">Ariano</span><span class="logo-light">Store</span>
       </router-link>
 
       <div class="search-bar">

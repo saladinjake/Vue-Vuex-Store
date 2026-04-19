@@ -8,6 +8,7 @@ const products = computed(() => store.getters['products/allProducts'])
 const loading = computed(() => store.getters['products/isLoading'])
 
 const search = ref('')
+const viewMode = ref('grid')
 
 const handleSearch = () => {
   store.dispatch('products/fetchProducts', { search: search.value })
@@ -47,8 +48,8 @@ onMounted(() => {
                 <input v-model="search" @input="handleSearch" type="text" placeholder="Search specifications..." />
             </div>
             <div class="view-options">
-                <button class="active"><Grid :size="18" /></button>
-                <button><List :size="18" /></button>
+                <button :class="{ active: viewMode === 'grid' }" @click="viewMode = 'grid'"><Grid :size="18" /></button>
+                <button :class="{ active: viewMode === 'list' }" @click="viewMode = 'list'"><List :size="18" /></button>
             </div>
         </div>
 
@@ -56,7 +57,7 @@ onMounted(() => {
             <div v-for="i in 8" :key="i" class="skeleton-card glass"></div>
         </div>
 
-        <div v-else class="product-grid">
+        <div v-else :class="viewMode === 'grid' ? 'product-grid' : 'product-list'">
             <div v-for="product in products" :key="product.id" class="product-card glass-card">
                 <div class="img-wrapper">
                     <img :src="product.images[0]" :alt="product.name" />
@@ -230,10 +231,40 @@ onMounted(() => {
  }
 
 
+.catalog-toolbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1.5rem;
+     border-radius: 20px;
+     margin-bottom: 2rem;
+     background: white;
+}
+
+.search-input {
+     display: flex;
+     align-items: center;
+     gap: 0.75rem;
+     flex: 1;
+     max-width: 400px;
+     background: #f8fafc;
+     padding: 0.75rem 1.25rem;
+     border-radius: 12px;
+     border: 1px solid var(--border-glass);
+}
+
+.search-input input {
+     border: none;
+     background: transparent;
+     width: 100%;
+     outline: none;
+     font-size: 0.95rem;
+     color: var(--text-primary);
+}
+
 .view-options  {
      display:  flex;
      gap:  1rem;
-     margin-bottom:  3.5rem;
  }
 
 .view-options button  {
@@ -268,13 +299,15 @@ onMounted(() => {
 
 
 .product-grid  {
-    
     display:  grid;
-    
     grid-template-columns:  repeat(3,  1fr);
-    
     gap:  2.5rem;
-    
+}
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .product-card  {
@@ -283,6 +316,27 @@ onMounted(() => {
      overflow:  hidden;
      padding-bottom:  1.5rem;
  }
+
+.product-list .product-card {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0;
+    align-items: stretch;
+}
+
+.product-list .img-wrapper {
+    width: 300px;
+    height: 100%;
+    min-height: 220px;
+    flex-shrink: 0;
+}
+
+.product-list .p-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .img-wrapper  {
     

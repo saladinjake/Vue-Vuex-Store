@@ -96,7 +96,7 @@ const addToCart = () => {
                 <button @click="quantity++">+</button>
             </div>
             <button @click="addToCart" class="btn-premium">
-                <ShoppingCart :size="20" /> Incorporate to Project
+                <ShoppingCart :size="20" /> Add to cart
             </button>
         </div>
 

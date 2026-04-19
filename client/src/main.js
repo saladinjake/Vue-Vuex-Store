@@ -20,7 +20,8 @@ const routes = [
     { path: '/dashboard', component: () => import('./pages/Dashboard.vue'), meta: { requiresAuth: true } },
     { path: '/solutions', component: () => import('./pages/Solutions.vue') },
     { path: '/orders', component: () => import('./pages/Orders.vue'), meta: { requiresAuth: true } },
-    { path: '/vendors', component: () => import('./pages/Vendors.vue') }
+    { path: '/vendors', component: () => import('./pages/Vendors.vue') },
+    { path: '/vendor/:id', component: () => import('./pages/VendorStore.vue') }
 ]
 
 const router = createRouter({

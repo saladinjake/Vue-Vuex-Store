@@ -1,6 +1,7 @@
 # B2B Nexus | Premium Industrial Marketplace (Vuex)
 
 This is a full-stack e-commerce project built with Vue 3 (Vite), Vuex, and Node.js (SQLite).
+Ensure to create .env file then set up your paystack and stripe api keys in the .env file
 
 ## Setup
 1. **Server**: `cd server && npm install && node index.js`

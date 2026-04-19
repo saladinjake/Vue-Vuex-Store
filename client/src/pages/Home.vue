@@ -19,7 +19,7 @@ onMounted(() => {
       <div class="hero-glow"></div>
       <div class="container hero-content animate-up">
         <div class="hero-text">
-          <div class="badge-premium">Next-Gen Industrial Commerce</div>
+          <div class="badge-premium">Powered By Indexed Store</div>
           <h1>Powering the <span class="gradient-text">Global Supply Chain</span> with Intelligence</h1>
           <p>Seamless procurement, verified vendors, and industrial-grade logistics for enterprise-level operations.</p>
           <div class="hero-ctas">
