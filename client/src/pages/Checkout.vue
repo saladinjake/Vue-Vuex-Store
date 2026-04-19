@@ -59,7 +59,8 @@ const payWithStripe = async () => {
         if (result.error) alert(result.error.message);
     } catch (err) {
         console.error('Stripe error:', err)
-        alert('Stripe initialization failed.')
+        const errMsg = err.response?.data?.error || err.message || 'Unknown error'
+        alert('Stripe payment failed: ' + errMsg)
     } finally {
         placing.value = false
     }
