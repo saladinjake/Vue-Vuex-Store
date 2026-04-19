@@ -71,7 +71,6 @@ const payWithPaystack = () => {
         key: import.meta.env.VITE_PAYSTACK_PUBLIC_KEY || 'pk_test_your_default_key',
         email: shipping.value.email,
         amount: Math.round(total.value * 100),
-        currency: 'USD',
         ref: 'PAY_' + Math.floor((Math.random() * 1000000000) + 1),
         callback: (response) => {
             handleCheckout(response.reference)
