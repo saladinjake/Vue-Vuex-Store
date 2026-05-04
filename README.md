@@ -68,24 +68,29 @@ Vue-Vuex-Store/
 ## Key Features
 
 ### 1. Role-Based Authentication
-- Dedicated dashboards for Customers, Sellers, and Admins.
-- JWT-secured routes with role guards on both frontend and backend.
+- Dedicated dashboards for Customers, Sellers, and Admins with scoped navigation menus.
+- JWT tokens stored securely and validated on every protected API route.
+- Frontend route guards implemented in Vue Router using Vuex auth state.
 
 ### 2. Paystack Payment Integration
-- Seamless credit card checkout powered by the Paystack API.
-- Payment verification callback handled server-side.
+- Inline Paystack popup triggered at checkout with amount and reference pre-filled.
+- Server-side verification endpoint confirms payment status before order creation.
+- Redirect flow handles both successful and cancelled payment outcomes gracefully.
 
 ### 3. Dynamic Marketplace
-- Browse products by category with live search and filtering.
-- Seller storefronts with individual product listings and inventory management.
+- Product catalog filterable by category, price range, and availability.
+- Seller storefronts aggregate all listings from a single seller with contact and rating info.
+- Inventory management panel allows sellers to add, edit, and delist products.
 
 ### 4. Admin Control Center
-- Verify or reject pending seller applications.
-- Moderate product listings and manage platform users.
+- Pending seller queue with one-click approve/reject and email-style notification.
+- Product moderation tools for flagging or removing non-compliant listings.
+- User management table with account status, role, and last-login visibility.
 
 ### 5. Order Management
-- Full order lifecycle: cart to checkout to order confirmation to order detail.
-- Per-order status tracking for both customers and sellers.
+- Full lifecycle: cart assembly, checkout, payment, confirmation, and detailed order view.
+- Customers track order status (Pending, Processing, Shipped, Delivered) in real time.
+- Sellers receive a live order feed with per-item fulfilment actions.
 
 ---
 
@@ -103,4 +108,8 @@ PAYSTACK_SECRET_KEY=sk_test_...
 VITE_API_URL=http://localhost:5001
 VITE_PAYSTACK_PUBLIC_KEY=pk_test_...
 ```
+
+---
+
+Developed as part of the FixNuewYearBug project portfolio. Last updated May 2026.
 
