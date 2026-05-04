@@ -1,4 +1,4 @@
-# B2B Nexus | Premium Industrial Marketplace (Vuex Edition)
+# Ariano Miguel Industrial Marketplace (Vuex Edition)
 
 A full-stack B2B e-commerce platform built with Vue 3, Vuex 4, and Node.js (SQLite) — featuring role-based dashboards, Paystack payment integration, seller verification, and dynamic product management.
 
@@ -6,7 +6,7 @@ A full-stack B2B e-commerce platform built with Vue 3, Vuex 4, and Node.js (SQLi
 
 ## Project Overview
 
-B2B Nexus (Vuex Edition) is a production-grade marketplace application targeting industrial and wholesale commerce. It implements a three-tier role system — Customer, Seller, and Admin — each with dedicated views and scoped permissions. Sellers can list products and manage inventory, customers can browse, add to cart, checkout, and track orders, while admins verify sellers and moderate the platform.
+Ariano Miguel industrial market place (Vuex Edition) is a production-grade marketplace application targeting industrial and wholesale commerce. It implements a three-tier role system — Customer, Seller, and Admin — each with dedicated views and scoped permissions. Sellers can list products and manage inventory, customers can browse, add to cart, checkout, and track orders, while admins verify sellers and moderate the platform.
 
 This variant uses Vuex for centralized state management and Paystack as the primary payment gateway, making it a direct complement to the Pinia-based `vue-app-market-place` project.
 
